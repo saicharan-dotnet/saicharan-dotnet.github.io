@@ -1,35 +1,87 @@
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   background: #0f172a;
   color: #e5e7eb;
 }
-header {
-  text-align: center;
-  padding: 60px 20px;
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
   background: #020617;
+  position: sticky;
+  top: 0;
 }
-h1 {
-  font-size: 2.5rem;
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
+
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+}
+
 .btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 24px;
+  padding: 12px 26px;
   background: #22c55e;
   color: #000;
-  text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
+  text-decoration: none;
 }
+
 section {
-  padding: 40px 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
+  padding: 60px 20px;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.grid div {
+  background: #020617;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card {
+  background: #020617;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
   background: #020617;
 }
