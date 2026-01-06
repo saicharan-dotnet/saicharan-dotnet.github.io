@@ -1,4 +1,4 @@
-body {
+﻿body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(120deg, #fdfbfb, #ebedee);
@@ -8,12 +8,14 @@ body {
 nav {
     position: sticky;
     top: 0;
+    z-index: 1000; /* 👈 ADD THIS */
     background: #ffffff;
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
+
 
     nav ul {
         list-style: none;
@@ -129,3 +131,124 @@ footer {
         opacity: 1;
     }
 }
+
+/* ===== SKILLS STYLES ===== */
+
+.skills-grid {
+    margin-top: 30px;
+}
+
+.skill {
+    padding: 22px;
+    border-radius: 16px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+    /* Hover animation */
+    .skill:hover {
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 16px 30px rgba(0,0,0,0.25);
+    }
+
+/* Tech-specific colors */
+.csharp {
+    background: linear-gradient(135deg, #68217a, #9b59b6);
+}
+
+.aspnet {
+    background: linear-gradient(135deg, #512bd4, #2563eb);
+}
+
+.mvc {
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+}
+
+.ef {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+}
+
+.sql {
+    background: linear-gradient(135deg, #cc2927, #f87171);
+}
+
+.frontend {
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.azure {
+    background: linear-gradient(135deg, #0078d4, #38bdf8);
+}
+
+.git {
+    background: linear-gradient(135deg, #24292e, #6b7280);
+}
+
+#experience {
+    position: relative;
+    overflow: hidden; /* 👈 prevents cards leaking outside */
+}
+.card {
+    position: relative;
+    z-index: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    /* hover animation */
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(0,0,0,.18);
+    }
+
+
+/* ===== CONTACT SECTION ===== */
+
+#contact {
+    background: #2563eb;
+    padding: 50px 20px;
+    color: white;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+    .contact-container h2 {
+        margin-bottom: 25px;
+        text-align: left; 
+    }
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+}
+
+    .contact-item img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .contact-item a {
+        color: #e0f2fe;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+
