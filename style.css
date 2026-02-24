@@ -157,40 +157,91 @@ nav {
         transform: translateY(-8px) scale(1.05);
         box-shadow: 0 18px 30px rgba(0,0,0,0.28);
     }
+        .skill:hover i,
+        .skill:hover img {
+            transform: scale(1.15);
+            transition: 0.3s ease;
+        }
+    /* ===== REAL SKILL ICON SUPPORT ===== */
 
-/* Skill Colors */
+    .skill i,
+    .skill img {
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
+        flex-shrink: 0;
+    }
+
+/* keep text + icon aligned nicely */
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+    /* if using colored devicons on dark gradient */
+    .skill i.colored {
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    /* if icon looks too dark on gradient */
+    .skill img.light,
+    .skill i.light {
+        filter: brightness(0) invert(1);
+    }
+/* =========================================================
+   TECHNOLOGY BRAND COLORS
+========================================================= */
+
+/* C# — Microsoft purple */
 .csharp {
-    background: linear-gradient(135deg, #68217a, #9b59b6);
+    background: linear-gradient(135deg, #512BD4, #7C4DFF);
 }
 
+/* ASP.NET Core — .NET purple */
 .aspnet {
-    background: linear-gradient(135deg, #512bd4, #2563eb);
+    background: linear-gradient(135deg, #512BD4, #6F42C1);
 }
 
+/* MVC / .NET — deep framework blue-purple */
 .mvc {
-    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    background: linear-gradient(135deg, #512BD4, #3F51B5);
 }
 
+/* Entity Framework — teal green */
 .ef {
-    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    background: linear-gradient(135deg, #00897B, #26A69A);
 }
 
+/* SQL Server — Microsoft data red */
 .sql {
-    background: linear-gradient(135deg, #cc2927, #f87171);
+    background: linear-gradient(135deg, #CC2927, #E53935);
 }
 
-.frontend {
-    background: linear-gradient(135deg, #f59e0b, #f97316);
+/* HTML — official HTML5 orange */
+.frontend.html {
+    background: linear-gradient(135deg, #E44D26, #F16529);
 }
 
+/* CSS — official CSS3 blue */
+.frontend.css {
+    background: linear-gradient(135deg, #264DE4, #2965F1);
+}
+
+/* jQuery — brand blue */
+.frontend.jquery {
+    background: linear-gradient(135deg, #0769AD, #1E88E5);
+}
+
+/* Azure — Microsoft cloud blue */
 .azure {
-    background: linear-gradient(135deg, #0078d4, #38bdf8);
+    background: linear-gradient(135deg, #0078D4, #0091EA);
 }
 
+/* GitHub — dark graphite */
 .git {
-    background: linear-gradient(135deg, #24292e, #6b7280);
+    background: linear-gradient(135deg, #181717, #333333);
 }
-
 /* =========================================================
    ABOUT SECTION (COLORFUL)
 ========================================================= */
@@ -385,6 +436,12 @@ nav {
         text-align: center;
         display: block;
     }
+    .skill i,
+    .skill img {
+        width: 32px;
+        height: 32px;
+        font-size: 32px;
+    }
 }
 
 /* ===== SCROLL TO TOP BUTTON ===== */
@@ -411,42 +468,6 @@ nav {
         transform: translateY(-4px) scale(1.1);
         box-shadow: 0 14px 35px rgba(0,0,0,0.35);
     }
-
-
-@media (max-width: 768px) {
-    nav {
-        padding: 15px 20px;
-    }
-
-        nav h2 {
-            margin-bottom: 10px;
-        }
-
-        nav ul {
-            width: 100%;
-            justify-content: flex-start;
-        }
-
-        nav li {
-            margin-right: 12px;
-        }
-}
-
-@media (max-width: 480px) {
-    .about-section {
-        padding: 30px 22px;
-    }
-        .contact-item {
-            flex-direction: row;
-            font-size: 1rem;
-        }
-
-        .icon {
-            width: 24px;
-            height: 24px;
-        }
-
-}
 
 
 
