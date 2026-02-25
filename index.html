@@ -2,16 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <title>Sai Charan | Senior .NET Developer</title>
+    <meta name="description" content="Senior .NET Developer with 6+ years experience in ASP.NET Core, C#, and Azure" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"> 
 </head>
 <body>
-
     <nav>
-        <h2>Sai Charan</h2>
-        <ul>
+        <a href="#" class="nav-brand">Sai Charan</a>
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+                <span class="theme-tooltip"></span>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <ul class="nav-menu" id="navMenu">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -21,247 +31,388 @@
     </nav>
 
     <header class="hero">
-        <img src="profile.jpeg" class="profile" alt="Sai Charan Photo">
+        <img src="profile.jpeg" class="profile" alt="Sai Charan Photo" loading="lazy" onerror="this.src='https://via.placeholder.com/180?text=SC'">
         <h1 class="fade">Sai Charan Venkata Chenna</h1>
         <p class="fade delay">Senior .NET Developer | ASP.NET Core | C# | SQL Server</p>
 
         <div class="buttons fade delay2">
-            <a class="btn blue" href="Sai_Charan_Senior_DotNet_Developer_Resume.pdf" download>Download Resume</a>
+            <a class="btn blue" href="Sai_Charan_Senior_DotNet_Developer_Resume.pdf" download onclick="handleDownload(event)">📄 Download Resume</a>
         </div>
     </header>
 
-    <section id="about" class="about-section slide">
-        <h2>About Me</h2>
-
-        <p>
-            I am a <span class="highlight blue-text">Senior .NET Developer</span> with
-            <span class="highlight green-text">6+ years</span> of experience in building
-            <strong>scalable, secure, enterprise-grade applications</strong>.
-        </p>
-
-        <p>
-            My expertise includes
-            <span class="tag">ASP.NET Core</span>
-            <span class="tag">C#</span>
-            <span class="tag">Web API</span>
-            <span class="tag">SQL Server</span>
-            and cloud deployments using
-            <span class="tag azure-tag">Azure App Services</span>.
-        </p>
-
-        <p>
-            I enjoy solving complex business problems, optimizing application performance,
-            and collaborating with cross-functional teams to deliver
-            <strong>high-quality software solutions</strong>.
-        </p>
+    <section id="about">
+        <div class="about-section slide">
+            <h2>About Me</h2>
+            <p>
+                I am a <span class="highlight blue-text">Senior .NET Developer</span> with
+                <span class="highlight green-text">6+ years</span> of experience in building
+                <strong>scalable, secure, enterprise-grade applications</strong>.
+            </p>
+            <p>
+                My expertise includes ASP.NET Core, C#, Web API, SQL Server, and cloud deployments.
+                I specialize in creating robust backend systems and optimizing application performance.
+            </p>
+            <div class="tags">
+                <span class="tag">ASP.NET Core</span>
+                <span class="tag">C#</span>
+                <span class="tag">Web API</span>
+                <span class="tag">SQL Server</span>
+                <span class="tag azure-tag">Azure App Services</span>
+                <span class="tag">Entity Framework</span>
+                <span class="tag">MVC</span>
+                <span class="tag">REST APIs</span>
+            </div>
+        </div>
     </section>
-
-
 
     <section id="skills">
         <h2>Technical Skills</h2>
-
-        <div class="grid skills-grid">
-
-            <div class="skill csharp vertical">
+        <div class="skills-grid">
+            <div class="skill csharp" role="button" tabindex="0">
                 <i class="devicon-csharp-plain"></i>
                 <span>C#</span>
             </div>
-
-            <div class="skill aspnet">
+            <div class="skill aspnet" role="button" tabindex="0">
                 <i class="devicon-dotnetcore-plain"></i>
                 <span>ASP.NET Core</span>
             </div>
-
-            <div class="skill mvc">
+            <div class="skill mvc" role="button" tabindex="0">
                 <i class="devicon-dot-net-plain"></i>
                 <span>MVC & Web API</span>
             </div>
-
-            <div class="skill ef">
+            <div class="skill ef" role="button" tabindex="0">
                 <i class="devicon-entityframeworkcore-plain"></i>
-                <span>Entity Framework Core</span>
+                <span>Entity Framework</span>
             </div>
-
-            <div class="skill sql">
+            <div class="skill sql" role="button" tabindex="0">
                 <i class="devicon-microsoftsqlserver-plain"></i>
                 <span>SQL Server</span>
             </div>
-
-            <div class="skill frontend html">
+            <div class="skill html" role="button" tabindex="0">
                 <i class="devicon-html5-plain"></i>
-                <span>HTML</span>
+                <span>HTML5</span>
             </div>
-
-            <div class="skill frontend css">
+            <div class="skill css" role="button" tabindex="0">
                 <i class="devicon-css3-plain"></i>
-                <span>CSS</span>
+                <span>CSS3</span>
             </div>
-
-            <div class="skill frontend jquery">
+            <div class="skill jquery" role="button" tabindex="0">
                 <i class="devicon-jquery-plain"></i>
                 <span>jQuery</span>
             </div>
-
-            <div class="skill azure">
+            <div class="skill azure" role="button" tabindex="0">
                 <i class="devicon-azure-plain"></i>
                 <span>Azure</span>
             </div>
-
-            <div class="skill git">
+            <div class="skill git" role="button" tabindex="0">
                 <i class="devicon-github-original"></i>
                 <span>GitHub</span>
             </div>
-
         </div>
     </section>
-
-
 
     <section id="experience">
-        <h2>Experience</h2>
+        <h2>Work Experience</h2>
+        <div class="grid">
+            <div class="card experience-card slide">
+                <h3>Senior .NET Associate</h3>
+                <span>Formstrackr | Feb 2024 – Present</span>
+                <ul>
+                    <li>Architected cloud-native form builder platform using ASP.NET Core</li>
+                    <li>Designed secure and scalable RESTful APIs for web and mobile clients</li>
+                    <li>Implemented role-based access control and JWT authentication</li>
+                    <li>Integrated Azure Blob Storage and background job processing</li>
+                    <li>Optimized database queries, improving performance by 40%</li>
+                </ul>
+            </div>
 
-        <div class="card experience-card slide">
-            <h3>Senior .NET Associate – Formstrackr</h3>
-            <span>Feb 2024 – Present</span>
-            <ul>
-                <li>Architected and developed a cloud-native form builder platform using ASP.NET Core</li>
-                <li>Designed secure and scalable RESTful APIs consumed by web and mobile clients</li>
-                <li>Implemented role-based access control and authentication mechanisms</li>
-                <li>Integrated Azure Blob Storage, background jobs, and logging mechanisms</li>
-                <li>Optimized database queries and improved application performance</li>
-            </ul>
-        </div>
-
-        <div class="card experience-card slide delay">
-            <h3>.NET Associate – LogicTree</h3>
-            <span>Jun 2019 – Sep 2023</span>
-            <ul>
-                <li>Developed enterprise-level applications using ASP.NET MVC and ASP.NET Core</li>
-                <li>Migrated legacy .NET applications to modern .NET Core architecture</li>
-                <li>Built reusable components and common service layers</li>
-                <li>Collaborated with QA teams to fix bugs and improve stability</li>
-                <li>Deployed and maintained applications on Azure App Services</li>
-            </ul>
+            <div class="card experience-card slide delay">
+                <h3>.NET Associate</h3>
+                <span>LogicTree | Jun 2019 – Sep 2023</span>
+                <ul>
+                    <li>Developed enterprise applications using ASP.NET MVC and Core</li>
+                    <li>Migrated legacy .NET apps to modern .NET Core architecture</li>
+                    <li>Built reusable components and common service layers</li>
+                    <li>Implemented CI/CD pipelines using Azure DevOps</li>
+                    <li>Deployed and maintained apps on Azure App Services</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-
     <section id="projects">
-        <h2>Projects</h2>
-
+        <h2>Featured Projects</h2>
         <div class="grid">
-            <div class="card project-card hover slide">
+            <div class="card project-card slide">
                 <h3>USPD Hub</h3>
-                <p>
-                    Enterprise business workflow management platform that helps organizations
-                    manage operations, reporting, and approvals efficiently.
-                </p>
+                <p>Enterprise business workflow management platform for operations and approvals.</p>
                 <ul>
                     <li>ASP.NET MVC & SQL Server</li>
                     <li>Role-based dashboards</li>
                     <li>Performance optimized queries</li>
+                    <li>Real-time notifications</li>
                 </ul>
-                <a href="https://www.uspdhub.com" target="_blank">Visit Website →</a>
+                <a href="https://www.uspdhub.com" target="_blank" rel="noopener">View Project</a>
             </div>
 
-            <div class="card project-card hover slide delay">
+            <div class="card project-card slide delay">
                 <h3>FormsTrackr</h3>
-                <p>
-                    Cloud-native form builder and tracking system for creating, submitting,
-                    and analyzing digital forms.
-                </p>
+                <p>Cloud-native form builder and tracking system for digital forms.</p>
                 <ul>
                     <li>ASP.NET Core Web API</li>
-                    <li>Azure App Services</li>
-                    <li>Secure authentication</li>
+                    <li>Azure App Services & Blob Storage</li>
+                    <li>JWT authentication</li>
+                    <li>Responsive React frontend</li>
                 </ul>
-                <a href="https://portal.formstrackr.com" target="_blank">Visit Website →</a>
+                <a href="https://portal.formstrackr.com" target="_blank" rel="noopener">View Project</a>
             </div>
         </div>
     </section>
 
-
     <footer id="contact">
         <div class="contact-container">
-            <h2>Contact</h2>
+            <h2>Let's Connect</h2>
 
             <div class="contact-item">
-                <!-- Email SVG -->
                 <svg viewBox="0 0 24 24" class="icon">
-                    <path d="M4 4h16v16H4z" fill="none" />
-                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12
-                 c0 1.1.9 2 2 2h16
-                 c1.1 0 2-.9 2-2V6
-                 c0-1.1-.9-2-2-2zm0 4
-                 -8 5-8-5V6l8 5 8-5v2z" />
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
-                <a href="mailto:saicharanchenna.net@gmail.com">
+                <a href="mailto:saicharanchenna.net@gmail.com" onclick="copyToClipboard(event, 'saicharanchenna.net@gmail.com')">
                     saicharanchenna.net@gmail.com
                 </a>
             </div>
 
             <div class="contact-item">
-                <!-- Phone SVG -->
                 <svg viewBox="0 0 24 24" class="icon">
-                    <path d="M6.6 10.8c1.5 3 4.1 5.5 7.1 7.1l2.4-2.4
-                 c.3-.3.7-.4 1.1-.3
-                 1.2.4 2.5.6 3.8.6
-                 .6 0 1 .4 1 1V20
-                 c0 .6-.4 1-1 1
-                 -10.5 0-19-8.5-19-19
-                 0-.6.4-1 1-1h3.5
-                 c.6 0 1 .4 1 1
-                 0 1.3.2 2.6.6 3.8
-                 .1.4 0 .8-.3 1.1L6.6 10.8z" />
+                    <path d="M6.6 10.8c1.5 3 4.1 5.5 7.1 7.1l2.4-2.4c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-10.5 0-19-8.5-19-19 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" />
                 </svg>
-                <a href="tel:+918341383217">
-                    +91 8341383217
+                <a href="tel:+918341383217" onclick="copyToClipboard(event, '+918341383217')">
+                    +91 83413 83217
                 </a>
             </div>
 
             <div class="contact-item">
-                <!-- LinkedIn SVG -->
                 <svg viewBox="0 0 24 24" class="icon">
-                    <path d="M4 3c0 1.1-.9 2-2 2s-2-.9-2-2
-                 .9-2 2-2 2 .9 2 2zM0 8h4v16H0zM7 8h4v2.3
-                 c.6-1.1 2-2.3 4.1-2.3
-                 4.4 0 5.2 2.9 5.2 6.7V24h-4v-7.7
-                 c0-1.8 0-4.1-2.5-4.1
-                 -2.5 0-2.9 2-2.9 4V24H7z" />
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
-                <a href="https://www.linkedin.com/in/venkata-sai-charan-chenna-736368158" target="_blank">
+                <a href="https://www.linkedin.com/in/venkata-sai-charan-chenna-736368158" target="_blank" rel="noopener">
                     LinkedIn Profile
                 </a>
             </div>
-
         </div>
     </footer>
 
-    <!-- Scroll To Top Button -->
     <button id="scrollTopBtn" title="Go to top">⬆</button>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        (function () {
+            'use strict';
 
-            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            // DOM Elements
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            const themeToggle = document.getElementById('themeToggle');
 
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 300) {
-                    scrollTopBtn.style.display = "block";
-                } else {
-                    scrollTopBtn.style.display = "none";
+            // =========================================================
+            // DARK MODE TOGGLE - FIXED
+            // =========================================================
+            function setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+
+                if (themeToggle) {
+                    themeToggle.setAttribute(
+                        'aria-label',
+                        theme === 'dark'
+                            ? 'Switch to light mode'
+                            : 'Switch to dark mode'
+                    );
                 }
-            });
+            }
 
-            scrollTopBtn.addEventListener("click", () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
+            function toggleTheme() {
+                const currentTheme =
+                    document.documentElement.getAttribute('data-theme');
+
+                setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+            }
+
+            // Initialize theme
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme) {
+                setTheme(savedTheme);
+            } else {
+                const systemPrefersDark = window
+                    .matchMedia('(prefers-color-scheme: dark)')
+                    .matches;
+
+                setTheme(systemPrefersDark ? 'dark' : 'light');
+            }
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+
+            // =========================================================
+            // MOBILE NAVIGATION
+            // =========================================================
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const isActive = this.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                    this.setAttribute('aria-expanded', isActive);
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function (e) {
+                    if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                        navToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Close menu when clicking a link
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // =========================================================
+            // SCROLL TO TOP BUTTON
+            // =========================================================
+            let scrollTimeout;
+            window.addEventListener('scroll', function () {
+                if (scrollTimeout) {
+                    window.cancelAnimationFrame(scrollTimeout);
+                }
+
+                scrollTimeout = window.requestAnimationFrame(function () {
+                    if (window.scrollY > 300) {
+                        scrollTopBtn.style.display = 'block';
+                        scrollTopBtn.style.opacity = '1';
+                    } else {
+                        scrollTopBtn.style.opacity = '0';
+                        setTimeout(() => {
+                            if (window.scrollY <= 300) {
+                                scrollTopBtn.style.display = 'none';
+                            }
+                        }, 300);
+                    }
+                });
+            }, { passive: true });
+
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('click', function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // =========================================================
+            // SMOOTH SCROLL FOR ANCHOR LINKS
+            // =========================================================
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
                 });
             });
 
-        });
-    </script>
+            // =========================================================
+            // COPY TO CLIPBOARD
+            // =========================================================
+            window.copyToClipboard = function (event, text) {
+                event.preventDefault();
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalText = event.target.textContent;
+                    event.target.textContent = 'Copied!';
+                    setTimeout(() => {
+                        event.target.textContent = originalText;
+                    }, 2000);
+                }).catch(() => {
+                    window.location.href = event.target.href;
+                });
+            };
 
+            // =========================================================
+            // DOWNLOAD HANDLER
+            // =========================================================
+            window.handleDownload = function (event) {
+                const link = event.target.closest('a');
+                if (!link || !link.href) return;
+                console.log('Resume download initiated');
+            };
+
+            // =========================================================
+            // ACTIVE SECTION HIGHLIGHTING
+            // =========================================================
+            const sections = document.querySelectorAll('section[id]');
+            window.addEventListener('scroll', function () {
+                let current = '';
+                const scrollPosition = window.scrollY + 100;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('href').replace('#', '');
+                    if (href === current) {
+                        link.classList.add('active');
+                    }
+                });
+            }, { passive: true });
+
+            // =========================================================
+            // TOUCH DEVICE DETECTION
+            // =========================================================
+            if ('ontouchstart' in window) {
+                document.body.classList.add('touch-device');
+            }
+
+            // =========================================================
+            // LAZY LOAD IMAGES
+            // =========================================================
+            if ('loading' in HTMLImageElement.prototype) {
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                    img.loading = 'lazy';
+                });
+            }
+
+            // =========================================================
+            // PREVENT DEFAULT ON EMPTY LINKS
+            // =========================================================
+            document.querySelectorAll('a[href="#"]').forEach(link => {
+                link.addEventListener('click', (e) => e.preventDefault());
+            });
+
+        })();
+    </script>
 </body>
 </html>
