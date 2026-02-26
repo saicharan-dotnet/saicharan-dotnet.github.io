@@ -299,7 +299,7 @@ nav {
     gap: var(--space-sm);
 }
 
-.theme-toggle {
+/*.theme-toggle {
     position: relative;
     width: 64px;
     height: 34px;
@@ -312,6 +312,16 @@ nav {
     justify-content: space-between;
     padding: 4px 6px;
     transition: background 0.3s ease;
+}*/
+.theme-toggle {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 /* Tooltip Base */
@@ -415,7 +425,7 @@ nav {
     }
 
 /* Navigation Menu */
-.nav-menu {
+/*.nav-menu {
     display: flex;
     list-style: none;
     gap: var(--space-md);
@@ -456,8 +466,68 @@ nav {
         .nav-menu a.active {
             background: color-mix(in srgb, var(--primary) 10%, transparent);
             transform: translateY(-2px);
+        }*/
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--space-md);
+    margin: 0;
+    padding: 0;
+}
+
+    /* Shared styles for both anchor and button */
+    .nav-menu a,
+    .nav-link-btn {
+        text-decoration: none;
+        color: var(--primary);
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: var(--radius-full);
+        transition: all 0.3s ease;
+        position: relative;
+        font-size: 1rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+        /* Underline animation */
+        .nav-menu a::after,
+        .nav-link-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
         }
 
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after,
+        .nav-link-btn:hover::after {
+            width: 70%;
+        }
+
+        /* Hover / Active state */
+        .nav-menu a:hover,
+        .nav-menu a:focus,
+        .nav-menu a.active,
+        .nav-link-btn:hover,
+        .nav-link-btn:focus {
+            background: color-mix(in srgb, var(--primary) 10%, transparent);
+            transform: translateY(-2px);
+        }
+
+        /* Remove default button outline but keep accessibility */
+        .nav-link-btn:focus-visible {
+            outline: 2px solid var(--secondary);
+            outline-offset: 3px;
+        }
 /* Mobile Navigation Toggle */
 .nav-toggle {
     display: none;
@@ -738,7 +808,7 @@ nav {
 
     .skill:hover i,
     .skill:hover img {
-        transform: rotate(360deg) scale(1.1);
+        transform: rotate3d(1, 1, 1, 360deg) scale(1.1);
     }
 
     .skill span {
@@ -971,7 +1041,7 @@ nav {
 }
 
 .contact-item:hover .icon {
-    transform: rotate(360deg) scale(1.1);
+    transform: rotate3d(1, 1, 1, 360deg) scale(1.1);
 }
 
 .contact-item a {
