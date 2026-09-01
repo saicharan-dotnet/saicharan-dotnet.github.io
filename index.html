@@ -1,424 +1,1186 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-    <title>Sai Charan | Senior .NET Developer</title>
-    <meta name="description" content="Senior .NET Developer with 6+ years experience in ASP.NET Core, C#, and Azure" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sai Charan Venkata Chenna | Senior .NET Developer | ASP.NET Core | React | Azure</title>
+
+<meta name="description"
+     content="Senior .NET Developer with 7+ years of experience in C#, ASP.NET Core, React, SQL Server, Azure, REST APIs, CI/CD and full-stack application development.">
+
+<meta name="keywords"
+     content=".NET Developer, Senior .NET Developer, C#, ASP.NET Core, ASP.NET MVC, Web API, React, SQL Server, Azure, Azure Blob Storage, Azure Functions, Azure WebJobs, CI/CD, Full Stack Developer">
+
+  <meta name="author" content="Sai Charan Venkata Chenna">
+
+<meta property="og:title"
+     content="Sai Charan Venkata Chenna | Senior .NET Developer">
+
+<meta property="og:description"
+     content="7+ years of professional experience in C#, ASP.NET Core, React, SQL Server, Azure and full-stack development.">
+
+  <meta property="og:type" content="website">
+
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --text: #0f172a;
+      --muted: #64748b;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --border: #e2e8f0;
+      --success: #16a34a;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max-width));
+      margin-inline: auto;
+    }
+
+    /* NAVIGATION */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--primary);
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      font-size: 26px;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 100px 0 80px;
+      background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.12), transparent 35%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(19px, 2.5vw, 26px);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero-description {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-size: 14px;
+      font-weight: 700;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary {
+      color: #ffffff;
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+    }
+
+    .hero-card {
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .quick-stat {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .quick-stat:last-child {
+      border-bottom: 0;
+    }
+
+    .quick-stat strong {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
+
+    .quick-stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 82px 0;
+    }
+
+    .section-header {
+      max-width: 700px;
+      margin-bottom: 42px;
+    }
+
+    .section-label {
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 8px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .skill-card h3 {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 6px 9px;
+      background: var(--surface-alt);
+      border-radius: 7px;
+      color: #334155;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* EXPERIENCE */
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 42px 32px;
+      border-left: 2px solid #cbd5e1;
+    }
+
+    .timeline-item:last-child {
+      border-left-color: transparent;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 1px var(--primary);
+    }
+
+    .timeline-date {
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .timeline-item h3 {
+      font-size: 21px;
+      margin-bottom: 3px;
+    }
+
+    .company {
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .timeline-item ul {
+      padding-left: 18px;
+      color: #475569;
+    }
+
+    .timeline-item li {
+      margin-bottom: 7px;
+    }
+
+    /* PROJECTS */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+    }
+
+    .project-number {
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .project-card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    /* ARCHITECTURE */
+
+    .architecture {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .architecture .section-header p {
+      color: #94a3b8;
+    }
+
+    .architecture-flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: center;
+      gap: 12px;
+    }
+
+    .architecture-box {
+      padding: 22px 12px;
+      text-align: center;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .architecture-arrow {
+      text-align: center;
+      color: #60a5fa;
+      font-size: 22px;
+    }
+
+    /* CONTACT */
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 30px;
+      padding: 38px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-inner p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* ACCESSIBILITY */
+
+    :focus-visible {
+      outline: 3px solid rgba(37, 99, 235, 0.35);
+      outline-offset: 3px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .architecture-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .architecture-arrow {
+        transform: rotate(90deg);
+      }
+
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 16px;
+        background: #ffffff;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .hero {
+        padding: 70px 0 60px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .skills-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
-    <nav>
-        <a href="#" class="nav-brand">Sai Charan</a>
-        <div class="nav-right">
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
+
+  <!-- NAVIGATION -->
+
+  <header class="navbar">
+    <div class="container nav-inner">
+
+```
+  <a class="brand" href="#home" aria-label="Sai Charan home">
+    Sai<span>.</span>
+  </a>
+
+  <button
+    class="menu-button"
+    id="menuButton"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="navLinks">
+    ☰
+  </button>
+
+  <nav aria-label="Primary navigation">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+</div>
+```
+
+  </header>
+
+  <main>
+
+```
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">
+        <span class="status-dot"></span>
+        Open to Senior .NET Opportunities
+      </div>
+
+      <h1>
+        Sai Charan<br>
+        <span>Venkata Chenna</span>
+      </h1>
+
+      <div class="hero-subtitle">
+        Senior .NET Developer | Full Stack | Azure
+      </div>
+
+      <p class="hero-description">
+        Senior .NET Developer with 7+ years of professional experience
+        building and supporting web applications using C#, ASP.NET Core,
+        React, SQL Server, Azure and REST APIs.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">
+          View Projects
+        </a>
+
+        <a class="btn btn-secondary" href="resume.pdf" download>
+          Download Resume
+        </a>
+
+        <a class="btn btn-secondary"
+           href="mailto:saicharanchenna.net@gmail.com">
+          Contact Me
+        </a>
+      </div>
+    </div>
+
+    <aside class="hero-card" aria-label="Professional highlights">
+
+      <h2>Professional Snapshot</h2>
+
+      <div class="quick-stat">
+        <strong>7+ Years</strong>
+        <span>Professional software development experience</span>
+      </div>
+
+      <div class="quick-stat">
+        <strong>Full Stack</strong>
+        <span>ASP.NET Core + React + SQL Server</span>
+      </div>
+
+      <div class="quick-stat">
+        <strong>Cloud</strong>
+        <span>Azure application development and deployment</span>
+      </div>
+
+      <div class="quick-stat">
+        <strong>Production</strong>
+        <span>Development, troubleshooting and application support</span>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-label">About Me</div>
+      <h2>Building reliable business applications with modern .NET.</h2>
+      <p>
+        My experience covers development, technical design, API development,
+        database work, cloud deployment, CI/CD, troubleshooting and
+        production support.
+      </p>
+    </div>
+
+    <div class="about-grid">
+
+      <article class="card">
+        <h3>Professional Experience</h3>
+        <p>
+          I started my professional software development career in
+          <strong>August 2019</strong> and have more than
+          <strong>7 years of experience</strong>.
+        </p>
+        <br>
+        <p>
+          My work has included multiple applications and projects,
+          including FormTrackR and USPD Hub, within my continuous
+          professional experience at LogicTree IT Solutions.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Engineering Focus</h3>
+        <p>
+          I focus on maintainable application design, clean API development,
+          SQL Server development, cloud integration, debugging,
+          production issue resolution, code reviews and continuous
+          improvement.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-label">Technical Skills</div>
+      <h2>Technology stack</h2>
+      <p>
+        Core technologies and engineering areas used throughout my
+        professional experience.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+
+      <article class="skill-card">
+        <h3>Backend</h3>
+        <div class="skill-tags">
+          <span class="tag">C#</span>
+          <span class="tag">ASP.NET Core</span>
+          <span class="tag">ASP.NET MVC</span>
+          <span class="tag">Web API</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Entity Framework</span>
+          <span class="tag">EF Core</span>
+          <span class="tag">ADO.NET</span>
+          <span class="tag">LINQ</span>
         </div>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-                <a href="javascript:void(0);"
-                   id="themeToggle"
-                   class="nav-link-btn"
-                   role="button"
-                   aria-label="Switch theme">
-                    ☀️ Light
-                </a>
-            </li>
+      </article>
+
+      <article class="skill-card">
+        <h3>Frontend</h3>
+        <div class="skill-tags">
+          <span class="tag">React</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">jQuery</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Razor</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <h3>Database</h3>
+        <div class="skill-tags">
+          <span class="tag">SQL Server</span>
+          <span class="tag">T-SQL</span>
+          <span class="tag">Stored Procedures</span>
+          <span class="tag">Functions</span>
+          <span class="tag">Triggers</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <h3>Azure</h3>
+        <div class="skill-tags">
+          <span class="tag">Azure App Service</span>
+          <span class="tag">Blob Storage</span>
+          <span class="tag">Azure WebJobs</span>
+          <span class="tag">Azure Functions</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <h3>DevOps & Tools</h3>
+        <div class="skill-tags">
+          <span class="tag">GitHub</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Visual Studio</span>
+          <span class="tag">Browser DevTools</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <h3>Engineering</h3>
+        <div class="skill-tags">
+          <span class="tag">Layered Architecture</span>
+          <span class="tag">MVC</span>
+          <span class="tag">Debugging</span>
+          <span class="tag">Tracing</span>
+          <span class="tag">Unit Testing</span>
+          <span class="tag">Production Support</span>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-label">Experience</div>
+      <h2>7+ years of professional development</h2>
+      <p>
+        Continuous professional experience beginning in August 2019,
+        across multiple projects and application responsibilities.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <article class="timeline-item">
+
+        <div class="timeline-date">
+          AUG 2019 — PRESENT
+        </div>
+
+        <h3>.NET Developer / Senior Associate</h3>
+
+        <div class="company">
+          LogicTree IT Solutions
+        </div>
+
+        <p>
+          Working across multiple applications and projects, with current
+          focus on FormTrackR and ongoing support responsibilities for
+          USPD Hub.
+        </p>
+
+        <ul>
+          <li>
+            Develop and maintain web applications using C# and ASP.NET Core.
+          </li>
+
+          <li>
+            Design and develop RESTful APIs and backend services.
+          </li>
+
+          <li>
+            Implement frontend functionality using React and JavaScript.
+          </li>
+
+          <li>
+            Work with SQL Server, T-SQL and .NET data-access technologies.
+          </li>
+
+          <li>
+            Work with Azure services including App Service, Blob Storage,
+            WebJobs and Functions.
+          </li>
+
+          <li>
+            Participate in CI/CD activities, code reviews, sprint planning
+            and QA coordination.
+          </li>
+
+          <li>
+            Investigate application and production issues, perform
+            debugging and implement fixes.
+          </li>
+
+          <li>
+            Provide USPD Hub support when issues arise while continuing
+            planned FormTrackR development.
+          </li>
         </ul>
-    </nav>
 
-    <header class="hero">
-        <img src="profile.jpeg" class="profile" alt="Sai Charan Photo" loading="lazy" onerror="this.src='https://via.placeholder.com/180?text=SC'">
-        <h1 class="fade">Sai Charan Venkata Chenna</h1>
-        <p class="fade delay">Senior .NET Developer | ASP.NET Core | C# | Api Services | SQL Server</p>
+      </article>
 
-        <div class="buttons fade delay2">
-            <a class="btn blue" href="Sai_Charan_Senior_DotNet_Developer_Resume.pdf" download onclick="handleDownload(event)">📄 Download Resume</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-label">Projects</div>
+      <h2>Selected professional projects</h2>
+      <p>
+        Real-world applications and responsibilities from my professional
+        development experience.
+      </p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+
+        <div class="project-number">01 — CURRENT</div>
+
+        <h3>FormTrackR</h3>
+
+        <p>
+          Cloud-based form builder and submission tracking application.
+          Involved in requirements, technical design, full-stack
+          development, API development, cloud integration, CI/CD and
+          production support.
+        </p>
+
+        <div class="project-stack">
+          <span class="tag">C#</span>
+          <span class="tag">ASP.NET Core</span>
+          <span class="tag">React</span>
+          <span class="tag">REST API</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">Azure</span>
+          <span class="tag">Blob Storage</span>
+          <span class="tag">CI/CD</span>
         </div>
-    </header>
 
-    <section id="about">
-        <div class="about-section slide">
-            <h2>About Me</h2>
-            <p>
-                I am a <span class="highlight blue-text">Senior .NET Developer</span> with
-                <span class="highlight green-text">6+ years</span> of experience in building
-                <strong>scalable, secure, enterprise-grade applications</strong>.
-            </p>
-            <p>
-                My expertise includes ASP.NET Core, C#, Web API, SQL Server, and cloud deployments.
-                I specialize in creating robust backend systems and optimizing application performance.
-            </p>
-            <div class="tags">
-                <span class="tag">ASP.NET Core</span>
-                <span class="tag">C#</span>
-                <span class="tag">Web API</span>
-                <span class="tag">SQL Server</span>
-                <span class="tag">Azure App Services</span>
-                <span class="tag">Entity Framework</span>
-                <span class="tag">MVC</span>
-                <span class="tag">REST APIs</span>
-            </div>
+      </article>
+
+      <article class="project-card">
+
+        <div class="project-number">02 — SUPPORT</div>
+
+        <h3>USPD Hub</h3>
+
+        <p>
+          Production application supported alongside ongoing FormTrackR
+          responsibilities. Involved in issue investigation, debugging,
+          resolution, validation and application maintenance whenever
+          issues require attention.
+        </p>
+
+        <div class="project-stack">
+          <span class="tag">.NET</span>
+          <span class="tag">C#</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">Web APIs</span>
+          <span class="tag">Production Support</span>
+          <span class="tag">Debugging</span>
         </div>
-    </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill csharp" role="button" tabindex="0">
-                <i class="devicon-csharp-plain"></i>
-                <span>C#</span>
-            </div>
-            <div class="skill aspnet" role="button" tabindex="0">
-                <i class="devicon-dotnetcore-plain"></i>
-                <span>ASP.NET Core</span>
-            </div>
-            <div class="skill mvc" role="button" tabindex="0">
-                <i class="devicon-dot-net-plain"></i>
-                <span>MVC & Web API</span>
-            </div>
-            <div class="skill ef" role="button" tabindex="0">
-                <i class="devicon-entityframeworkcore-plain"></i>
-                <span>Entity Framework</span>
-            </div>
-            <div class="skill sql" role="button" tabindex="0">
-                <i class="devicon-microsoftsqlserver-plain"></i>
-                <span>SQL Server</span>
-            </div>
-            <div class="skill html" role="button" tabindex="0">
-                <i class="devicon-html5-plain"></i>
-                <span>HTML5</span>
-            </div>
-            <div class="skill css" role="button" tabindex="0">
-                <i class="devicon-css3-plain"></i>
-                <span>CSS3</span>
-            </div>
-            <div class="skill jquery" role="button" tabindex="0">
-                <i class="devicon-jquery-plain"></i>
-                <span>jQuery</span>
-            </div>
-            <div class="skill azure" role="button" tabindex="0">
-                <i class="devicon-azure-plain"></i>
-                <span>Azure</span>
-            </div>
-            <div class="skill git" role="button" tabindex="0">
-                <i class="devicon-github-original"></i>
-                <span>GitHub</span>
-            </div>
-        </div>
-    </section>
+      </article>
 
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <div class="grid">
-            <div class="card experience-card slide">
-                <h3>Senior .NET Associate</h3>
-                <span>Formstrackr | Feb 2024 – Present</span>
-                <ul>
-                    <li>Architected cloud-native form builder platform using ASP.NET Core</li>
-                    <li>Designed secure and scalable RESTful APIs for web and mobile clients</li>
-                    <li>Implemented role-based access control and JWT authentication</li>
-                    <li>Integrated Azure Blob Storage and background job processing</li>
-                    <li>Optimized database queries, improving performance by 40%</li>
-                </ul>
-            </div>
+    </div>
 
-            <div class="card experience-card slide delay">
-                <h3>.NET Associate</h3>
-                <span>LogicTree | Jun 2019 – Sep 2023</span>
-                <ul>
-                    <li>Developed enterprise applications using ASP.NET MVC and Core</li>
-                    <li>Migrated legacy .NET apps to modern .NET Core architecture</li>
-                    <li>Built reusable components and common service layers</li>
-                    <li>Implemented CI/CD pipelines using Azure DevOps</li>
-                    <li>Deployed and maintained apps on Azure App Services</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+  </div>
+</section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="grid">
-            <div class="card project-card slide">
-                <h3>USPD Hub</h3>
-                <p>Enterprise business workflow management platform for operations and approvals.</p>
-                <ul>
-                    <li>ASP.NET MVC & SQL Server</li>
-                    <li>Role-based dashboards</li>
-                    <li>Performance optimized queries</li>
-                    <li>Real-time notifications</li>
-                </ul>
-                <a href="https://www.uspdhub.com" target="_blank" rel="noopener">View Project</a>
-            </div>
+<!-- ARCHITECTURE -->
 
-            <div class="card project-card slide delay">
-                <h3>FormsTrackr</h3>
-                <p>Cloud-native form builder and tracking system for digital forms.</p>
-                <ul>
-                    <li>ASP.NET Core Web API</li>
-                    <li>Azure App Services & Blob Storage</li>
-                    <li>JWT authentication</li>
-                    <li>Responsive React frontend</li>
-                </ul>
-                <a href="https://portal.formstrackr.com" target="_blank" rel="noopener">View Project</a>
-            </div>
-        </div>
-    </section>
+<section class="architecture" id="architecture">
 
-    <footer id="contact">
-        <div class="contact-container">
-            <h2>Let's Connect</h2>
+  <div class="container">
 
-            <div class="contact-item">
-                <svg viewBox="0 0 24 24" class="icon">
-                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-                <a href="mailto:saicharanchenna.net@gmail.com" onclick="copyToClipboard(event, 'saicharanchenna.net@gmail.com')">
-                    saicharanchenna.net@gmail.com
-                </a>
-            </div>
+    <div class="section-header">
+      <div class="section-label">Architecture</div>
+      <h2>Modern full-stack application approach</h2>
+      <p>
+        A simplified representation of the technology layers used in
+        modern .NET full-stack applications. Actual project architecture
+        can vary by application and requirement.
+      </p>
+    </div>
 
-            <div class="contact-item">
-                <svg viewBox="0 0 24 24" class="icon">
-                    <path d="M6.6 10.8c1.5 3 4.1 5.5 7.1 7.1l2.4-2.4c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-10.5 0-19-8.5-19-19 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" />
-                </svg>
-                <a href="tel:+918341383217" onclick="copyToClipboard(event, '+918341383217')">
-                    +91 83413 83217
-                </a>
-            </div>
+    <div class="architecture-flow">
 
-            <div class="contact-item">
-                <svg viewBox="0 0 24 24" class="icon">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-                <a href="https://www.linkedin.com/in/venkata-sai-charan-chenna-736368158" target="_blank" rel="noopener">
-                    LinkedIn Profile
-                </a>
-            </div>
-        </div>
-    </footer>
+      <div class="architecture-box">
+        React / JavaScript
+      </div>
 
-    <button id="scrollTopBtn" title="Go to top">⬆</button>
+      <div class="architecture-arrow">
+        →
+      </div>
 
-    <script>
-        (function () {
-            'use strict';
+      <div class="architecture-box">
+        ASP.NET Core<br>
+        REST APIs
+      </div>
 
-            // DOM Elements
-            const navToggle = document.getElementById('navToggle');
-            const navMenu = document.getElementById('navMenu');
-            const scrollTopBtn = document.getElementById('scrollTopBtn');
-            const themeToggle = document.getElementById('themeToggle');
+      <div class="architecture-arrow">
+        →
+      </div>
 
-            function updateToggleUI(theme) {
-                if (!themeToggle) return;
+      <div class="architecture-box">
+        SQL Server<br>
+        + Azure Services
+      </div>
 
-                if (theme === 'dark') {
-                    themeToggle.textContent = '☀️ Light';
-                    themeToggle.setAttribute('aria-label', 'Switch to light mode');
-                } else {
-                    themeToggle.textContent = '🌙 Dark';
-                    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
-                }
-            }
+    </div>
 
-            function setTheme(theme) {
-                document.documentElement.setAttribute('data-theme', theme);
-                localStorage.setItem('theme', theme);
-                updateToggleUI(theme);
-            }
+  </div>
 
-            function toggleTheme(event) {
-                event.preventDefault(); // Important for <a>
-                const currentTheme =
-                    document.documentElement.getAttribute('data-theme');
+</section>
 
-                setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-            }
+<!-- CONTACT -->
 
-            (function initTheme() {
-                const savedTheme = localStorage.getItem('theme');
+<section id="contact">
+  <div class="container">
 
-                if (savedTheme) {
-                    setTheme(savedTheme);
-                    return;
-                }
+    <div class="contact-card">
 
-                const prefersDark =
-                    window.matchMedia('(prefers-color-scheme: dark)').matches;
+      <div>
+        <div class="section-label">Let's Connect</div>
 
-                setTheme(prefersDark ? 'dark' : 'light');
-            })();
+        <h2>Looking for my next Senior .NET opportunity.</h2>
 
-            if (themeToggle) {
-                themeToggle.addEventListener('click', toggleTheme);
-            }
-            // =========================================================
-            // MOBILE NAVIGATION
-            // =========================================================
-            if (navToggle && navMenu) {
-                navToggle.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    const isActive = this.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                    this.setAttribute('aria-expanded', isActive);
-                });
+        <p>
+          Interested in Senior .NET, Full Stack, ASP.NET Core or
+          Azure-focused opportunities.
+        </p>
+      </div>
 
-                // Close menu when clicking outside
-                document.addEventListener('click', function (e) {
-                    if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                        navToggle.classList.remove('active');
-                        navMenu.classList.remove('active');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                    }
-                });
+      <div class="hero-actions">
 
-                // Close menu when clicking a link
-                navMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        navToggle.classList.remove('active');
-                        navMenu.classList.remove('active');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                    });
-                });
-            }
+        <a
+          class="btn btn-primary"
+          href="mailto:saicharanchenna.net@gmail.com">
+          Email Me
+        </a>
 
-            // =========================================================
-            // SCROLL TO TOP BUTTON
-            // =========================================================
-            let scrollTimeout;
-            window.addEventListener('scroll', function () {
-                if (scrollTimeout) {
-                    window.cancelAnimationFrame(scrollTimeout);
-                }
+        <a
+          class="btn btn-secondary"
+          href="resume.pdf"
+          download>
+          Resume
+        </a>
 
-                scrollTimeout = window.requestAnimationFrame(function () {
-                    if (window.scrollY > 300) {
-                        scrollTopBtn.style.display = 'block';
-                        scrollTopBtn.style.opacity = '1';
-                    } else {
-                        scrollTopBtn.style.opacity = '0';
-                        setTimeout(() => {
-                            if (window.scrollY <= 300) {
-                                scrollTopBtn.style.display = 'none';
-                            }
-                        }, 300);
-                    }
-                });
-            }, { passive: true });
+      </div>
 
-            if (scrollTopBtn) {
-                scrollTopBtn.addEventListener('click', function () {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            }
+    </div>
 
-            // =========================================================
-            // SMOOTH SCROLL FOR ANCHOR LINKS
-            // =========================================================
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const href = this.getAttribute('href');
-                    if (href === '#') return;
+  </div>
+</section>
+```
 
-                    const target = document.querySelector(href);
-                    if (target) {
-                        e.preventDefault();
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
+  </main>
 
-            // =========================================================
-            // COPY TO CLIPBOARD
-            // =========================================================
-            window.copyToClipboard = function (event, text) {
-                event.preventDefault();
-                navigator.clipboard.writeText(text).then(() => {
-                    const originalText = event.target.textContent;
-                    event.target.textContent = 'Copied!';
-                    setTimeout(() => {
-                        event.target.textContent = originalText;
-                    }, 2000);
-                }).catch(() => {
-                    window.location.href = event.target.href;
-                });
-            };
+  <!-- FOOTER -->
 
-            // =========================================================
-            // DOWNLOAD HANDLER
-            // =========================================================
-            window.handleDownload = function (event) {
-                const link = event.target.closest('a');
-                if (!link || !link.href) return;
-                console.log('Resume download initiated');
-            };
+  <footer>
+    <div class="container footer-inner">
 
-            // =========================================================
-            // ACTIVE SECTION HIGHLIGHTING
-            // =========================================================
-            const sections = document.querySelectorAll('section[id]');
-            window.addEventListener('scroll', function () {
-                let current = '';
-                const scrollPosition = window.scrollY + 100;
+```
+  <p>
+    © 2026 Sai Charan Venkata Chenna. All rights reserved.
+  </p>
 
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionBottom = sectionTop + section.offsetHeight;
+  <div class="footer-links">
 
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                        current = section.getAttribute('id');
-                    }
-                });
+    <a
+      href="mailto:saicharanchenna.net@gmail.com">
+      Email
+    </a>
 
-                navMenu.querySelectorAll('a').forEach(link => {
-                    link.classList.remove('active');
-                    const href = link.getAttribute('href').replace('#', '');
-                    if (href === current) {
-                        link.classList.add('active');
-                    }
-                });
-            }, { passive: true });
+    <a
+      href="https://github.com/saicharan-dotnet"
+      target="_blank"
+      rel="noopener noreferrer">
+      GitHub
+    </a>
 
-            // =========================================================
-            // TOUCH DEVICE DETECTION
-            // =========================================================
-            if ('ontouchstart' in window) {
-                document.body.classList.add('touch-device');
-            }
+    <a
+      href="https://www.linkedin.com/"
+      target="_blank"
+      rel="noopener noreferrer">
+      LinkedIn
+    </a>
 
-            // =========================================================
-            // LAZY LOAD IMAGES
-            // =========================================================
-            if ('loading' in HTMLImageElement.prototype) {
-                const images = document.querySelectorAll('img[loading="lazy"]');
-                images.forEach(img => {
-                    img.loading = 'lazy';
-                });
-            }
+  </div>
 
-            // =========================================================
-            // PREVENT DEFAULT ON EMPTY LINKS
-            // =========================================================
-            document.querySelectorAll('a[href="#"]').forEach(link => {
-                link.addEventListener('click', (e) => e.preventDefault());
-            });
+</div>
+```
 
-        })();
-    </script>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("is-open");
+
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+    });
+
+    navLinks.addEventListener("click", (event) => {
+      if (event.target.tagName === "A") {
+        navLinks.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation menu");
+      }
+    });
+  </script>
+
 </body>
 </html>
