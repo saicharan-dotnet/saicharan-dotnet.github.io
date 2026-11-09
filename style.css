@@ -270,7 +270,9 @@ h3 { font-size: 1.15rem; letter-spacing: -.01em; font-weight: 700; }
 .project-card h3 { font-size: 1.6rem; letter-spacing: -.02em; }
 .featured h3 { font-size: 2.2rem; }
 .featured > p { max-width: 760px; }
-.featured .checks { grid-template-columns: 1fr 1fr; column-gap: 24px; }
+.featured .checks, .wide .checks { grid-template-columns: 1fr 1fr; column-gap: 24px; }
+.project-card.wide { grid-column: 1 / -1; }
+.wide > p { max-width: 760px; }
 .project-sub { color: var(--accent-2); font-weight: 500; margin: 4px 0 14px; }
 .project-card > p { color: var(--text-soft); }
 .checks { list-style: none; margin-top: 18px; display: grid; gap: 8px; }
@@ -353,7 +355,7 @@ h3 { font-size: 1.15rem; letter-spacing: -.01em; font-weight: 700; }
   .stats { grid-template-columns: 1fr 1fr; margin-top: 48px; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
   .project-grid { grid-template-columns: 1fr; }
-  .featured .checks { grid-template-columns: 1fr; }
+  .featured .checks, .wide .checks { grid-template-columns: 1fr; }
   .resume-card { padding: 36px 28px; }
 }
 

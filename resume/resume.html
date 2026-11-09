@@ -19,10 +19,10 @@
   .page { max-width: 7.3in; margin: 0 auto; }
   @media screen { body { background: #f1f5f9; padding: 32px 16px; } .page { background: #fff; padding: 0.55in 0.6in; box-shadow: 0 10px 40px rgba(15,23,42,.12); max-width: 8.5in; } }
 
-  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-bottom: 12px; border-bottom: 2.5px solid var(--accent); }
-  h1 { font-size: 22pt; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  header { padding-bottom: 12px; border-bottom: 2.5px solid var(--accent); }
+  h1 { white-space: nowrap; font-size: 22pt; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
   .title { color: var(--accent); font-weight: 600; font-size: 10.5pt; margin-top: 4px; }
-  .contact { text-align: right; white-space: nowrap; font-size: 8.8pt; color: var(--muted); line-height: 1.6; }
+  .contact { display: flex; flex-wrap: wrap; gap: 2px 14px; margin-top: 8px; font-size: 8.6pt; color: var(--muted); }
   .contact a { color: var(--muted); text-decoration: none; }
 
   section { margin-top: 14px; }
@@ -45,7 +45,8 @@
   .company { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
   .company h3 { font-size: 11pt; font-weight: 700; }
   .company .when { font-weight: 600; color: var(--muted); font-size: 9pt; }
-  .role { margin-top: 9px; break-inside: avoid-page; }
+  .role { margin-top: 9px; }
+  .role-head, .project, .context { break-after: avoid; }
   .role-head { display: flex; justify-content: space-between; align-items: baseline; }
   .role-head h4 { font-size: 10pt; font-weight: 700; }
   .role-head .when { color: var(--muted); font-size: 8.8pt; font-weight: 500; }
@@ -64,9 +65,11 @@
     <div class="title">Senior .NET Developer · Full Stack · Azure</div>
   </div>
   <div class="contact">
-    <a href="mailto:saicharanchenna.net@gmail.com">saicharanchenna.net@gmail.com</a><br>
-    +91 83413 83217<br>
-    <a href="https://saicharan-dotnet.github.io">saicharan-dotnet.github.io</a> · <a href="https://github.com/saicharan-dotnet">github.com/saicharan-dotnet</a>
+    <a href="mailto:saicharanchenna.net@gmail.com">saicharanchenna.net@gmail.com</a>
+    <span>+91 83413 83217</span>
+    <a href="https://www.linkedin.com/in/venkata-sai-charan-chenna-736368158/">linkedin.com/in/venkata-sai-charan-chenna-736368158</a>
+    <a href="https://github.com/saicharan-dotnet">github.com/saicharan-dotnet</a>
+    <a href="https://saicharan-dotnet.github.io">saicharan-dotnet.github.io</a>
   </div>
 </header>
 
@@ -74,7 +77,7 @@
   <h2>Professional Summary</h2>
   <p>
     Senior .NET Developer with <strong>7+ years</strong> of experience across the full software development life cycle:
-    requirements, technical design, development, testing, deployment and production support. Currently leading full-stack
+    requirements, technical design, development, testing, deployment and production support. Since 2023, leading full-stack
     delivery of <strong>FormTrackR</strong>, a cloud-native form builder built on <strong>ASP.NET Core, React, SQL Server and Azure</strong>.
     Experienced in modernising legacy ASP.NET Web Forms applications to ASP.NET Core MVC, designing REST APIs consumed by web
     and mobile clients, and keeping production systems healthy through structured debugging and root-cause fixes.
@@ -109,23 +112,23 @@
   </div>
 
   <div class="role">
-    <div class="role-head"><h4>.NET Senior Associate</h4><span class="when">Feb 2024 – Present</span></div>
-    <div class="project">FormTrackR (lead) · USPD Hub (support)</div>
-    <div class="context">FormTrackR is a cloud-native form builder and submission tracker; USPD Hub is a production application supported alongside it.</div>
+    <div class="role-head"><h4>.NET Senior Associate</h4><span class="when">2023 – Present</span></div>
+    <div class="project">FormTrackR</div>
+    <div class="context">Cloud-native form builder and submission tracker.</div>
     <ul>
       <li>Own requirement gathering and technical design, and lead full-stack implementation of FormTrackR from architecture to release.</li>
       <li>Designed RESTful APIs in <strong>ASP.NET Core</strong> and built the client-side experience in <strong>React</strong>.</li>
       <li>Integrated <strong>Azure Blob Storage</strong> for secure file uploads and implemented email notifications for submission workflows.</li>
       <li>Maintain the <strong>CI/CD pipelines</strong> and conduct code reviews to keep releases predictable and code quality consistent.</li>
       <li>Improved team productivity by streamlining sprint planning, code review and QA hand-off processes.</li>
-      <li>Investigate, debug and resolve production issues on <strong>USPD Hub</strong> as they arise, without derailing planned FormTrackR work.</li>
+      <li>Investigate, debug and resolve production issues through to root cause.</li>
     </ul>
     <div class="stack"><b>Stack:</b> C#, ASP.NET Core, React, REST APIs, SQL Server, Azure App Service, Azure Blob Storage, CI/CD</div>
   </div>
 
   <div class="role">
-    <div class="role-head"><h4>.NET Associate</h4><span class="when">Aug 2019 – Jan 2024</span></div>
-    <div class="project">SmartConnect Apps</div>
+    <div class="role-head"><h4>.NET Junior Associate</h4><span class="when">Aug 2019 – 2023</span></div>
+    <div class="project">USPD Hub (SmartConnect Apps)</div>
     <div class="context">
       Customisable web and mobile apps offered as a service to businesses, associations and organisations: real-time content
       and notifications, user feedback routing, workflow-based tenant issue tracking for property management, and vehicle
@@ -133,7 +136,7 @@
     </div>
     <ul>
       <li>Worked as a full-stack developer in an Agile/Scrum team on the user portal using ASP.NET Web Forms, C#, JavaScript, jQuery and Bootstrap.</li>
-      <li>Built a <strong>RESTful ASP.NET Web API</strong> service that supplies data to the SmartConnect mobile apps.</li>
+      <li>Built a <strong>RESTful ASP.NET Web API</strong> service that supplies data to the USPD Hub mobile apps.</li>
       <li>Helped <strong>migrate the platform from Web Forms to ASP.NET Core MVC</strong> with Entity Framework Core (database-first), using layouts, partial views and custom controller actions.</li>
       <li>Implemented a dynamic, JavaScript-based <strong>form builder</strong>, plus custom user and web controls (validation, status bar, grid).</li>
       <li>Developed business-logic and data tiers with C# and ADO.NET; wrote SQL Server stored procedures and user-defined functions.</li>
