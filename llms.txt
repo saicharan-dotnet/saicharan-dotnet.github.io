@@ -1,0 +1,23 @@
+# Sai Charan Venkata Chenna
+
+> Senior .NET Developer with 7+ years of experience building, deploying and supporting web applications with C#, ASP.NET Core, React, SQL Server and Microsoft Azure. .NET Senior Associate at LogicTree IT Solutions (India). Open to Senior .NET, full-stack ASP.NET Core + React, and Azure-focused roles.
+
+## Contact
+
+- Email: saicharanchenna.net@gmail.com
+- LinkedIn: https://www.linkedin.com/in/venkata-sai-charan-chenna-736368158/
+- Portfolio: https://saicharan-dotnet.github.io/
+- Resume (PDF): https://saicharan-dotnet.github.io/Sai_Charan_Senior_DotNet_Developer_Resume.pdf
+
+## Experience
+
+- **.NET Senior Associate, LogicTree IT Solutions (2023 – present)** — Leads full-stack delivery of FormTrackR, a cloud-native form builder and submission tracker. Owns requirements, technical design, ASP.NET Core REST APIs, React UI, Azure Blob Storage uploads, Azure Functions, Azure AI Foundry features, CI/CD pipelines, code reviews and production support.
+- **.NET Junior Associate, LogicTree IT Solutions (Aug 2019 – 2023)** — Full-stack developer on USPD Hub (SmartConnect Apps), a white-label web and mobile app platform. Built the ASP.NET Web API behind the mobile apps, helped migrate from ASP.NET Web Forms to ASP.NET Core MVC with EF Core, built a JavaScript form builder, wrote SQL Server stored procedures, and deployed to Azure App Service with scheduled Azure WebJobs.
+
+## Skills
+
+- Backend: C#, ASP.NET Core (3.1/6/7), ASP.NET MVC, ASP.NET Web API, ASP.NET Web Forms, REST APIs, LINQ
+- Data: SQL Server 2016–2019, T-SQL, stored procedures, Entity Framework Core, ADO.NET
+- Frontend: React, JavaScript, jQuery, AJAX, HTML5, CSS3, Bootstrap, Razor
+- Cloud: Azure Functions, Azure AI Foundry, Azure App Service, Azure Blob Storage, Azure WebJobs
+- DevOps & practices: Git, GitHub, CI/CD, Agile/Scrum, code reviews, layered architecture, unit testing, production support
