@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Charan Venkata Chenna – Resume</title>
+<!--
+  Source for Sai_Charan_Senior_DotNet_Developer_Resume.pdf.
+  Edit this file, then regenerate the PDF with:  node resume/build-pdf.js
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: Letter; margin: 0.55in 0.6in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink: #0f172a; --muted: #475569; --accent: #4f46e5; --rule: #e2e8f0; }
+  body { font-family: Inter, "Segoe UI", Arial, sans-serif; color: var(--ink); font-size: 9.6pt; line-height: 1.45; background: #fff; }
+  .page { max-width: 7.3in; margin: 0 auto; }
+  @media screen { body { background: #f1f5f9; padding: 32px 16px; } .page { background: #fff; padding: 0.55in 0.6in; box-shadow: 0 10px 40px rgba(15,23,42,.12); max-width: 8.5in; } }
+
+  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-bottom: 12px; border-bottom: 2.5px solid var(--accent); }
+  h1 { font-size: 22pt; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .title { color: var(--accent); font-weight: 600; font-size: 10.5pt; margin-top: 4px; }
+  .contact { text-align: right; white-space: nowrap; font-size: 8.8pt; color: var(--muted); line-height: 1.6; }
+  .contact a { color: var(--muted); text-decoration: none; }
+
+  section { margin-top: 14px; }
+  h2 { font-size: 9pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); padding-bottom: 4px; border-bottom: 1px solid var(--rule); margin-bottom: 8px; }
+  p { color: #1e293b; }
+  ul { padding-left: 15px; }
+  li { margin: 2.5px 0; color: #1e293b; }
+  li::marker { color: var(--accent); }
+  strong { font-weight: 600; color: var(--ink); }
+
+  .highlights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 10px; }
+  .hl { border: 1px solid var(--rule); border-radius: 6px; padding: 6px 8px; }
+  .hl b { display: block; font-size: 12pt; color: var(--accent); }
+  .hl span { font-size: 8pt; color: var(--muted); }
+
+  .skills { display: grid; grid-template-columns: 1.25in 1fr; row-gap: 3px; column-gap: 12px; }
+  .skills dt { font-weight: 600; }
+  .skills dd { color: #1e293b; }
+
+  .company { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+  .company h3 { font-size: 11pt; font-weight: 700; }
+  .company .when { font-weight: 600; color: var(--muted); font-size: 9pt; }
+  .role { margin-top: 9px; break-inside: avoid-page; }
+  .role-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .role-head h4 { font-size: 10pt; font-weight: 700; }
+  .role-head .when { color: var(--muted); font-size: 8.8pt; font-weight: 500; }
+  .project { color: var(--accent); font-weight: 600; font-size: 9pt; margin: 1px 0 3px; }
+  .context { font-size: 9pt; color: var(--muted); margin-bottom: 3px; }
+  .stack { font-size: 8.6pt; color: var(--muted); margin-top: 4px; }
+  .stack b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div>
+    <h1>Sai Charan Venkata Chenna</h1>
+    <div class="title">Senior .NET Developer · Full Stack · Azure</div>
+  </div>
+  <div class="contact">
+    <a href="mailto:saicharanchenna.net@gmail.com">saicharanchenna.net@gmail.com</a><br>
+    +91 83413 83217<br>
+    <a href="https://saicharan-dotnet.github.io">saicharan-dotnet.github.io</a> · <a href="https://github.com/saicharan-dotnet">github.com/saicharan-dotnet</a>
+  </div>
+</header>
+
+<section>
+  <h2>Professional Summary</h2>
+  <p>
+    Senior .NET Developer with <strong>7+ years</strong> of experience across the full software development life cycle:
+    requirements, technical design, development, testing, deployment and production support. Currently leading full-stack
+    delivery of <strong>FormTrackR</strong>, a cloud-native form builder built on <strong>ASP.NET Core, React, SQL Server and Azure</strong>.
+    Experienced in modernising legacy ASP.NET Web Forms applications to ASP.NET Core MVC, designing REST APIs consumed by web
+    and mobile clients, and keeping production systems healthy through structured debugging and root-cause fixes.
+  </p>
+  <div class="highlights">
+    <div class="hl"><b>7+ yrs</b><span>Professional .NET development</span></div>
+    <div class="hl"><b>Full stack</b><span>ASP.NET Core · React · SQL Server</span></div>
+    <div class="hl"><b>Azure</b><span>App Service · Blob · WebJobs · Functions</span></div>
+    <div class="hl"><b>End to end</b><span>Design → CI/CD → production support</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Technical Skills</h2>
+  <dl class="skills">
+    <dt>Backend</dt><dd>C#, ASP.NET Core (3.1 / 6 / 7), ASP.NET MVC, ASP.NET Web API, ASP.NET Web Forms, .NET Framework 4.x, REST APIs</dd>
+    <dt>Data access</dt><dd>Entity Framework Core, Entity Framework, ADO.NET, LINQ (to Objects, to SQL)</dd>
+    <dt>Database</dt><dd>SQL Server 2016 / 2017 / 2019, T-SQL, stored procedures, user-defined functions, triggers</dd>
+    <dt>Frontend</dt><dd>React, JavaScript, jQuery, AJAX, HTML5, CSS3, Bootstrap, Razor views</dd>
+    <dt>Cloud</dt><dd>Azure App Service, Azure Blob Storage, Azure WebJobs (scheduled), Azure Functions, custom domains &amp; SSL</dd>
+    <dt>DevOps &amp; tools</dt><dd>Git, GitHub, CI/CD pipelines, Visual Studio, browser DevTools</dd>
+    <dt>Practices</dt><dd>Layered architecture, MVC pattern, Agile/Scrum, code reviews, unit &amp; functional testing, debugging &amp; tracing, production support</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Professional Experience</h2>
+
+  <div class="company">
+    <h3>LogicTree IT Solutions</h3>
+    <span class="when">Aug 2019 – Present</span>
+  </div>
+
+  <div class="role">
+    <div class="role-head"><h4>.NET Senior Associate</h4><span class="when">Feb 2024 – Present</span></div>
+    <div class="project">FormTrackR (lead) · USPD Hub (support)</div>
+    <div class="context">FormTrackR is a cloud-native form builder and submission tracker; USPD Hub is a production application supported alongside it.</div>
+    <ul>
+      <li>Own requirement gathering and technical design, and lead full-stack implementation of FormTrackR from architecture to release.</li>
+      <li>Designed RESTful APIs in <strong>ASP.NET Core</strong> and built the client-side experience in <strong>React</strong>.</li>
+      <li>Integrated <strong>Azure Blob Storage</strong> for secure file uploads and implemented email notifications for submission workflows.</li>
+      <li>Maintain the <strong>CI/CD pipelines</strong> and conduct code reviews to keep releases predictable and code quality consistent.</li>
+      <li>Improved team productivity by streamlining sprint planning, code review and QA hand-off processes.</li>
+      <li>Investigate, debug and resolve production issues on <strong>USPD Hub</strong> as they arise, without derailing planned FormTrackR work.</li>
+    </ul>
+    <div class="stack"><b>Stack:</b> C#, ASP.NET Core, React, REST APIs, SQL Server, Azure App Service, Azure Blob Storage, CI/CD</div>
+  </div>
+
+  <div class="role">
+    <div class="role-head"><h4>.NET Associate</h4><span class="when">Aug 2019 – Jan 2024</span></div>
+    <div class="project">SmartConnect Apps</div>
+    <div class="context">
+      Customisable web and mobile apps offered as a service to businesses, associations and organisations: real-time content
+      and notifications, user feedback routing, workflow-based tenant issue tracking for property management, and vehicle
+      service tracking for fleet management.
+    </div>
+    <ul>
+      <li>Worked as a full-stack developer in an Agile/Scrum team on the user portal using ASP.NET Web Forms, C#, JavaScript, jQuery and Bootstrap.</li>
+      <li>Built a <strong>RESTful ASP.NET Web API</strong> service that supplies data to the SmartConnect mobile apps.</li>
+      <li>Helped <strong>migrate the platform from Web Forms to ASP.NET Core MVC</strong> with Entity Framework Core (database-first), using layouts, partial views and custom controller actions.</li>
+      <li>Implemented a dynamic, JavaScript-based <strong>form builder</strong>, plus custom user and web controls (validation, status bar, grid).</li>
+      <li>Developed business-logic and data tiers with C# and ADO.NET; wrote SQL Server stored procedures and user-defined functions.</li>
+      <li>Used AJAX for partial page updates to cut page response times; managed client and server state with cookies, session and application objects.</li>
+      <li>Deployed to <strong>Azure App Service</strong> with custom-domain SSL binding, and built scheduled <strong>Azure WebJobs</strong> for automated user emails.</li>
+      <li>Performed unit and functional testing, debugged with browser DevTools, and fixed defects found during QA.</li>
+    </ul>
+    <div class="stack"><b>Stack:</b> C#, ASP.NET Web Forms, ASP.NET Core MVC, ASP.NET Web API, EF Core, ADO.NET, SQL Server, jQuery, Bootstrap, Azure, GitHub</div>
+  </div>
+</section>
+
+</div>
+</body>
+</html>
