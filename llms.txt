@@ -16,7 +16,7 @@
 
 ## Skills
 
-- Backend: C#, ASP.NET Core (3.1/6/7), ASP.NET MVC, ASP.NET Web API, ASP.NET Web Forms, REST APIs, LINQ
+- Backend: C#, ASP.NET Core (6/7/8/9/10), ASP.NET MVC, ASP.NET Web API, ASP.NET Web Forms, REST APIs, LINQ
 - Data: SQL Server 2016–2019, T-SQL, stored procedures, Entity Framework Core, ADO.NET
 - Frontend: React, JavaScript, jQuery, AJAX, HTML5, CSS3, Bootstrap, Razor
 - Cloud: Azure Functions, Azure AI Foundry, Azure App Service, Azure Blob Storage, Azure WebJobs
