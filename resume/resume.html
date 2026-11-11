@@ -8,19 +8,16 @@
   Source for Sai_Charan_Senior_DotNet_Developer_Resume.pdf.
   Edit this file, then regenerate the PDF with:  node resume/build-pdf.js
 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   @page { size: Letter; margin: 0.55in 0.6in; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --ink: #0f172a; --muted: #475569; --accent: #4f46e5; --rule: #e2e8f0; }
-  body { font-family: Inter, "Segoe UI", Arial, sans-serif; color: var(--ink); font-size: 9.6pt; line-height: 1.45; background: #fff; }
+  body { font-family: Calibri, Carlito, Arial, "Liberation Sans", sans-serif; color: var(--ink); font-size: 10.4pt; line-height: 1.45; background: #fff; }
   .page { max-width: 7.3in; margin: 0 auto; }
   @media screen { body { background: #f1f5f9; padding: 32px 16px; } .page { background: #fff; padding: 0.55in 0.6in; box-shadow: 0 10px 40px rgba(15,23,42,.12); max-width: 8.5in; } }
 
   header { padding-bottom: 12px; border-bottom: 2.5px solid var(--accent); }
-  h1 { white-space: nowrap; font-size: 22pt; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  h1 { white-space: nowrap; font-size: 22pt; font-weight: 700; line-height: 1.1; }
   .title { color: var(--accent); font-weight: 600; font-size: 10.5pt; margin-top: 4px; }
   .contact { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 10px; font-size: 9pt; color: #1e293b; }
   .contact b { color: var(--accent); font-weight: 600; margin-right: 2px; }
@@ -28,21 +25,16 @@
   .contact a.link { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 
   section { margin-top: 14px; }
-  h2 { font-size: 9pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); padding-bottom: 4px; border-bottom: 1px solid var(--rule); margin-bottom: 8px; }
+  h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; color: var(--accent); padding-bottom: 4px; border-bottom: 1px solid var(--rule); margin-bottom: 8px; }
   p { color: #1e293b; }
   ul { padding-left: 15px; }
   li { margin: 2.5px 0; color: #1e293b; }
   li::marker { color: var(--accent); }
   strong { font-weight: 600; color: var(--ink); }
 
-  .highlights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 10px; }
-  .hl { border: 1px solid var(--rule); border-radius: 6px; padding: 6px 8px; }
-  .hl b { display: block; font-size: 12pt; color: var(--accent); }
-  .hl span { font-size: 8pt; color: var(--muted); }
 
-  .skills { display: grid; grid-template-columns: 1.25in 1fr; row-gap: 3px; column-gap: 12px; }
-  .skills dt { font-weight: 600; }
-  .skills dd { color: #1e293b; }
+  .skills { list-style: none; padding-left: 0; }
+  .skills li { margin: 2px 0; }
 
   .company { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
   .company h3 { font-size: 11pt; font-weight: 700; }
@@ -69,8 +61,8 @@
   <div class="contact">
     <span><b>Phone:</b> +91 83413 83217</span>
     <span><b>Email:</b> <a href="mailto:saicharanchenna.net@gmail.com">saicharanchenna.net@gmail.com</a></span>
-    <span><a class="link" href="https://www.linkedin.com/in/venkata-sai-charan-chenna-736368158/">LinkedIn ↗</a></span>
-    <span><a class="link" href="https://saicharan-dotnet.github.io/">Portfolio ↗</a></span>
+    <span><a class="link" href="https://www.linkedin.com/in/venkata-sai-charan-chenna-736368158/">LinkedIn</a></span>
+    <span><a class="link" href="https://saicharan-dotnet.github.io/">Portfolio</a></span>
   </div>
 </header>
 
@@ -83,25 +75,19 @@
     Experienced in modernising legacy ASP.NET Web Forms applications to ASP.NET Core MVC, designing REST APIs consumed by web
     and mobile clients, and keeping production systems healthy through structured debugging and root-cause fixes.
   </p>
-  <div class="highlights">
-    <div class="hl"><b>7+ yrs</b><span>Professional .NET development</span></div>
-    <div class="hl"><b>Full stack</b><span>ASP.NET Core · React · SQL Server</span></div>
-    <div class="hl"><b>Azure</b><span>Functions · AI Foundry · App Service · Blob</span></div>
-    <div class="hl"><b>End to end</b><span>Design → CI/CD → production support</span></div>
-  </div>
 </section>
 
 <section>
   <h2>Technical Skills</h2>
-  <dl class="skills">
-    <dt>Backend</dt><dd>C#, ASP.NET Core (6 / 7 / 8 / 9 / 10), ASP.NET MVC, ASP.NET Web API, ASP.NET Web Forms, REST APIs</dd>
-    <dt>Data access</dt><dd>Entity Framework Core, Entity Framework, ADO.NET, LINQ (to Objects, to SQL)</dd>
-    <dt>Database</dt><dd>SQL Server 2016 / 2017 / 2019, T-SQL, stored procedures, user-defined functions, triggers</dd>
-    <dt>Frontend</dt><dd>React, JavaScript, jQuery, AJAX, HTML5, CSS3, Bootstrap, Razor views</dd>
-    <dt>Cloud</dt><dd>Azure App Service, Azure Blob Storage, Azure Functions, Azure AI Foundry, Azure WebJobs (scheduled), custom domains &amp; SSL</dd>
-    <dt>DevOps &amp; tools</dt><dd>Git, GitHub, CI/CD pipelines, Visual Studio, browser DevTools</dd>
-    <dt>Practices</dt><dd>Layered architecture, MVC pattern, Agile/Scrum, code reviews, unit &amp; functional testing, debugging &amp; tracing, production support</dd>
-  </dl>
+  <ul class="skills">
+    <li><strong>Backend:</strong> C#, ASP.NET Core (6 / 7 / 8 / 9 / 10), ASP.NET MVC, ASP.NET Web API, ASP.NET Web Forms, REST APIs</li>
+    <li><strong>Data access:</strong> Entity Framework Core, Entity Framework, ADO.NET, LINQ (to Objects, to SQL)</li>
+    <li><strong>Database:</strong> SQL Server 2016 / 2017 / 2019, T-SQL, stored procedures, user-defined functions, triggers</li>
+    <li><strong>Frontend:</strong> React, JavaScript, jQuery, AJAX, HTML5, CSS3, Bootstrap, Razor views</li>
+    <li><strong>Cloud:</strong> Azure App Service, Azure Blob Storage, Azure Functions, Azure AI Foundry, Azure WebJobs (scheduled), custom domains &amp; SSL</li>
+    <li><strong>DevOps &amp; tools:</strong> Git, GitHub, CI/CD pipelines, Visual Studio, browser DevTools</li>
+    <li><strong>Practices:</strong> Layered architecture, MVC pattern, Agile/Scrum, code reviews, unit &amp; functional testing, debugging &amp; tracing, production support</li>
+  </ul>
 </section>
 
 <section>
